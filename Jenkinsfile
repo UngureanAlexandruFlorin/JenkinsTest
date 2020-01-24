@@ -12,7 +12,9 @@ pipeline {
             }
         }
 	stage('Deploy') {
+		steps {
 		sh 'sudo docker pull alexandruubytex/docker_jenkins:latest'
+	    }
 	}
     }
 }
