@@ -8,8 +8,11 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'echo "Done"' 
+                sh 'sudo docker build . -t docker_jenkins:latest'
             }
         }
+	stage('Deploy') {
+		sh 'sudo docker pull alexandruubytex/docker_jenkins:latest'
+	}
     }
 }
