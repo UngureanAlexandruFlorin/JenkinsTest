@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-		sh 'export PATH=$PATH:/bin'
+		sh 'export PATH=$PATH:/usr/bin'
                 sh 'docker build . -t docker_jenkins:latest'
             }
         }
