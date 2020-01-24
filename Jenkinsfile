@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-		sh 'echo pwd'
+		sh 'echo $pwd'
                 sh 'docker build . -t docker_jenkins:latest'
             }
         }
