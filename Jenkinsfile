@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-		sh 'cat "/etc/passwd"'
-                sh 'docker build . -t docker_jenkins:latest'
+		sh './jenkins/scripts/deliver.sh'
+               // sh 'docker build . -t docker_jenkins:latest'
             }
         }
 	stage('Deploy') {
 		steps {
-		sh 'docker pull alexandruubytex/docker_jenkins:latest'
+		// sh 'docker pull alexandruubytex/docker_jenkins:latest'
 	    }
 	}
     }
