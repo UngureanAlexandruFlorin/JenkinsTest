@@ -15,6 +15,7 @@ pipeline {
 	stage('Deploy') {
 		steps {
 		// sh 'docker pull alexandruubytex/docker_jenkins:latest'
+		sh 'echo "Deploy"'
 	    }
 	}
     }
