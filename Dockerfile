@@ -1,2 +1,2 @@
-from node
-copy server.js /app
+from node:latest
+copy server.js /app/
