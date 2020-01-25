@@ -9,6 +9,7 @@ pipeline {
         stage('Build') { 
             steps {
 		// sh 'echo $pwd'
+		sh 'docker login -u "alexandruubytex" -p "333Albastru333"'
                 sh 'docker build . -t docker_jenkins:latest'
             }
         }
