@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-		sh 'echo $pwd'
-               // sh 'docker build . -t docker_jenkins:latest'
+		// sh 'echo $pwd'
+                sh 'docker build . -t docker_jenkins:latest'
             }
         }
 	stage('Deploy') {
 		steps {
-		// sh 'docker pull alexandruubytex/docker_jenkins:latest'
+		sh 'docker pull alexandruubytex/docker_jenkins:latest'
 		sh 'echo "Deploy"'
 	    }
 	}
