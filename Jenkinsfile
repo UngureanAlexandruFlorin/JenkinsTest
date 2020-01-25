@@ -16,7 +16,7 @@ pipeline {
 	stage('Deploy') {
 		steps {
 		sh 'docker push alexandruubytex/docker_jenkins:latest'
-		sh 'docker run -p 3500:3500 alexandruubytex/docker_jenkins:latest'
+		sh 'docker run -d -p 3500:3500 alexandruubytex/docker_jenkins:latest'
 	    }
 	}
     }
